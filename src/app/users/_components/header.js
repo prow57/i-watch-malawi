@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Bell, LogOut } from 'lucide-react';
+import { Search, Bell } from 'lucide-react';
 
 const Header = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <header className="bg-black py-2 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -26,7 +29,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Right - Notifications, Profile, and Logout */}
+        {/* Right - Notifications & Profile */}
         <div className="flex items-center space-x-4">
           {/* Notifications Icon */}
           <button className="text-white">
@@ -34,15 +37,22 @@ const Header = () => {
           </button>
 
           {/* Profile Section */}
-          <div className="flex items-center space-x-2">
-            <img className="h-10 w-10 rounded-full" src="/default-avatar.png" alt="User Profile" />
-           
-          </div>
+          <div className="relative">
+            <button onClick={() => setDropdownOpen(!dropdownOpen)} className="focus:outline-none">
+              <img className="h-10 w-10 rounded-full cursor-pointer" src="/default-avatar.png" alt="User Profile" />
+            </button>
 
-          {/* Logout Button */}
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-           <LogOut size={24}/>
-          </button>
+            {/* Dropdown Menu */}
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded-md overflow-hidden">
+                <Link href="/profile" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Profile</Link>
+                <Link href="/settings" className="block px-4 py-2 text-gray-800 hover:bg-gray-100">Settings</Link>
+                <button className="w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100" onClick={() => alert('Signing Out...')}>
+                  Sign Out
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </header>

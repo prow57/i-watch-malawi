@@ -28,9 +28,11 @@ const Home: React.FC = () => {
   }, []);
 
   return (
+    
     <div>
-      <Header />
-
+      <div>
+        <Header />
+      </div>
       <div className="p-4">
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 animate-pulse">
@@ -53,7 +55,6 @@ const Home: React.FC = () => {
           </div>
         )}
       </div>
-
       <Footer />
     </div>
   );
