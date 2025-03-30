@@ -16,8 +16,7 @@ export interface ContentItem {
   }
   
   export interface NavItem {
-    title: string
-    href: string
-    icon: React.ReactNode
-    count?: number
+    title: string;
+    href: string;
+    count?: number;
   }

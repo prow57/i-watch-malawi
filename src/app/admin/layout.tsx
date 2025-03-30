@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './admin.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +15,7 @@ export default function AdminLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50`}>
+      <body className={`${inter.className} bg-gray-950`}>
         <div className="flex h-screen">
           {children}
         </div>

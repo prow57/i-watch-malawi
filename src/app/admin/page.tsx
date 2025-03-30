@@ -1,7 +1,7 @@
 import Sidebar from './components/Sidebar'
-import DashboardHeader from './components/Header'
 import StatsCards from './components/StatsCards'
 import ContentTable from './components/ContentTable'
+import Header from './components/Header'
 
 export default function AdminPage() {
   return (

@@ -1,14 +1,14 @@
 import { NavItem, ContentItem } from '../types/dashboard-types'
-import { FiHome, FiVideo, FiMusic, FiUsers, FiDollarSign, FiSettings, FiFlag, FiTrendingUp } from 'react-icons/fi'
+//import { FiHome, FiVideo, FiMusic, FiUsers, FiDollarSign, FiSettings, FiFlag, FiTrendingUp } from 'react-icons/fi'
 
 export const NAV_ITEMS: NavItem[] = [
-  { title: 'Dashboard', href: '/admin', icon: <FiHome /> },
-  { title: 'Videos', href: '/admin/videos', icon: <FiVideo />, count: 12 },
-  { title: 'Music', href: '/admin/music', icon: <FiMusic />, count: 8 },
-  { title: 'Users', href: '/admin/users', icon: <FiUsers /> },
-  { title: 'Monetization', href: '/admin/monetization', icon: <FiDollarSign /> },
-  { title: 'Flagged Content', href: '/admin/flagged', icon: <FiFlag />, count: 5 },
-  { title: 'Settings', href: '/admin/settings', icon: <FiSettings /> },
+  { title: 'Dashboard', href: '/admin'},
+  { title: 'Videos', href: '/admin/videos', count: 12 },
+  { title: 'Music', href: '/admin/music', count: 8 },
+  { title: 'Users', href: '/admin/users'},
+  { title: 'Monetization', href: '/admin/monetization' },
+  { title: 'Flagged Content', href: '/admin/flagged',count: 5 },
+  { title: 'Settings', href: '/admin/settings' },
 ]
 
 export const SAMPLE_CONTENT: ContentItem[] = [
@@ -60,8 +60,8 @@ export const SAMPLE_CONTENT: ContentItem[] = [
 ]
 
 export const STATS_CARDS = [
-  { title: 'Total Views', value: '12.4M', change: 12.5, icon: <FiTrendingUp /> },
-  { title: 'Active Users', value: '845K', change: 8.2, icon: <FiUsers /> },
-  { title: 'Videos Uploaded', value: '24.5K', change: 3.2, icon: <FiVideo /> },
-  { title: 'Music Tracks', value: '18.7K', change: 5.7, icon: <FiMusic /> },
+  { title: 'Total Views', value: '12.4M', change: 12.5,},
+  { title: 'Active Users', value: '845K', change: 8.2,},
+  { title: 'Videos Uploaded', value: '24.5K', change: 3.2, },
+  { title: 'Music Tracks', value: '18.7K', change: 5.7, },
 ]
