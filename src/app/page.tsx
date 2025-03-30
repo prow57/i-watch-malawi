@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Header from "./users/_components/header";
 import Footer from "./users/_components/footer";
 
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
+  const router = useRouter();
 
   useEffect(() => {
     setTimeout(() => {
@@ -33,6 +35,13 @@ const Home: React.FC = () => {
       <Header />
 
       <div className="p-4">
+        <button
+          className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          onClick={() => router.push("/users/authentication")}
+        >
+          Go to Login
+        </button>
+
         {loading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 animate-pulse">
             {Array(6)
