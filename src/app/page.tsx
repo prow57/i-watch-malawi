@@ -37,7 +37,7 @@ const Home: React.FC = () => {
       <div className="p-4">
         <button
           className="mb-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          onClick={() => router.push("/users/authentication")}
+          onClick={() => router.push("/users/authentication/signin")}
         >
           Go to Login
         </button>
